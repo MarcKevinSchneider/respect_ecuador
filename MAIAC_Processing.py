@@ -147,7 +147,7 @@ def maiac_file_processing(file_path, out_tiff_path):
     print(f"Saved GeoTIFF to {out_tiff_path}")
 
 # input folder of your files
-input_folder = "C:/Users/kevis/OneDrive/Desktop/HiWi-Job/AOD_Paulina/data/AOD_Temp/MCD19A2_061_AOD"
+input_folder = "~/AOD_Temp/MCD19A2_061_AOD"
 
 # all files with the correct name
 files = sorted(glob.glob(os.path.join(input_folder, "MCD19A2*.hdf")))
@@ -157,6 +157,7 @@ for file in files:
     # for the final name
     h, v = tile_from_name(file)
     # construct outpath
-    outpath = f"D:/Universitaet/HiWi-Job/MODIS_AOD/TIFF/MODIS_AOD_Year_{h}_JulianDay_{v}.tiff"
+    outpath = f"~/MODIS_AOD/TIFF/MODIS_AOD_Year_{h}_JulianDay_{v}.tiff"
     # save everything
     maiac_file_processing(file, outpath)
+
